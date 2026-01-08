@@ -1,0 +1,25 @@
+[project]
+name = "uv-structure-example"
+version = "0.1.0"
+description = "Add your description here"
+readme = "README.md"
+requires-python = ">=3.12"
+dependencies = [
+    "support-one"
+]
+
+[tool.uv.sources]
+support-one = { workspace = true }
+
+[tool.uv.workspace]
+members = [
+    "packages/support-one",
+]
+
+[tool.pyright]
+venvPath = "."
+venv = ".venv"
+
+[build-system]
+requires = ["setuptools"]
+build-backend = "setuptools.build_meta"
