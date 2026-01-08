@@ -4,6 +4,8 @@ Example of how to structure a `uv` workspace with inter-package dependencies.
 
 Includes `pyright` configuration to address import resolution issues in vscode.
 
+Includes `mypy` pre-commit configuration and passes `mypy` checks.
+
 ## Structure
 
 - `primary` package depends on `support-one` package
