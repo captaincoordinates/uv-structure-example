@@ -5,6 +5,7 @@ requires-python = ">=3.12"
 [manifest]
 members = [
     "support-one",
+    "support-two",
     "uv-structure-example",
 ]
 
@@ -12,6 +13,17 @@ members = [
 name = "support-one"
 version = "0.1.0"
 source = { editable = "packages/support-one" }
+
+[[package]]
+name = "support-two"
+version = "0.1.0"
+source = { virtual = "packages/support-two" }
+dependencies = [
+    { name = "support-one" },
+]
+
+[package.metadata]
+requires-dist = [{ name = "support-one", editable = "packages/support-one" }]
 
 [[package]]
 name = "uv-structure-example"
